@@ -1,0 +1,7 @@
+- id: check-podfile
+  name: Check Podfile
+  description: This hook makes sure Podfile is valid and Podfile.lock is up to date.
+  entry: check-podfile.sh
+  language: script
+  types: [text]
+  files: 'Podfile(.lock)?'
