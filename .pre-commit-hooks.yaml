@@ -2,7 +2,7 @@
   name: Check Podfile
   description: This hook makes sure Podfile is valid and Podfile.lock is up to date.
   language: script
-  entry: check-podfile.sh
+  entry: ./check-podfile/check-podfile.sh
   types: [text]
   files: 'Podfile(.lock)?'
 - id: swiftformat
@@ -13,3 +13,10 @@
   args: ['--quiet']
   types: [text]
   files: '.*\.swift$'
+- id: svg-validate
+  name: Validate SVG
+  description: This hook validates SVG images against the SVG schema.
+  language: script
+  entry: ./svg-validate/svg-validate.sh
+  files: '.*\.svg'
+  pass_filenames: true
