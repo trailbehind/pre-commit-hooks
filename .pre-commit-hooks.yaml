@@ -20,3 +20,10 @@
   entry: ./svg-validate/svg-validate.sh
   files: '.*\.svg'
   pass_filenames: true
+- id: pgFormatter
+  name: pgFormat
+  description: This hook format postgres sql using pgFormatter
+  language: script
+  entry: ./pgFormatter/format.sh
+  files: '.*\.sql$'
+  pass_filenames: true
